@@ -1,4 +1,4 @@
-# opencode - Configuración Global
+# genexus-dev-opencode
 
 Configuración global de [opencode](https://opencode.ai) con agentes personalizados, skills de GeneXus y MCP servers.
 
