@@ -1,6 +1,14 @@
 # genexus-dev-opencode
 
-Configuración global de [opencode](https://opencode.ai) con agentes personalizados, skills de GeneXus y MCP servers.
+Configuración global de [opencode](https://opencode.ai) diseñada para equipos de desarrollo que trabajan con **múltiples stacks tecnológicos**. Incluye agentes especializados, skills personalizados, servidores MCP y soporte LSP para cubrir todo el ciclo de desarrollo:
+
+- **GeneXus** — Agente especializado con skills `nexa` y `gx-erp-connector` para modelado de Knowledge Bases, generación de objetos y conexión SAP vía RFC/BAPI. Integración con servidor MCP de GeneXus para operaciones en vivo sobre KBs.
+- **C# / .NET** — Agente para ASP.NET Core, Entity Framework, Clean Architecture y CQRS con MediatR.
+- **Java / Spring Boot** — Agente para Spring Boot 3.x, JPA/Hibernate, Maven/Gradle y JUnit.
+- **Web Fullstack** — Agente para HTML, CSS, JavaScript, TypeScript, React, Vue y Next.js.
+- **Python** — Soporte LSP con Pyright para type-checking en vivo.
+
+Incluye MCP servers para Chrome DevTools (testing visual), Context7 (documentación actualizada de librerías) y GeneXus (operaciones sobre KBs). LSP preparado para TypeScript, ESLint, C#, Java y Python — solo descomentar y usar.
 
 ---
 
@@ -36,7 +44,7 @@ Define MCP servers y LSP (comentado).
 
 #### 1. Configurar el Servidor GeneXus MCP
 
-El servidor MCP de GeneXus se configura en `bl\appsettings.template.json` (dentro de tu instalación de GeneXus):
+El servidor MCP de GeneXus se configura en `bl\appsettings.template.json` (dentro de tu instalación de GeneXus Next, aun que NO TENGAS LICENCIAS ACTIVAS):
 
 ```json
 {
@@ -45,7 +53,7 @@ El servidor MCP de GeneXus se configura en `bl\appsettings.template.json` (dentr
     "SessionIdleTimeoutMinutes": 30
   },
   "KnowledgeBases": {
-    "ProjectsFolder": "TU-CARPETA-DE-KBs",
+    "ProjectsFolder": "AQUI-PATH-CARPETA-KBs",
     "SqlServerInstance": "NOMBRE\\INSTANCIA-SQL",
     "SqlUserName": "",
     "SqlUserPassword": ""
@@ -63,7 +71,7 @@ Iniciar `GeneXus.PIA.McpServer.exe` desde la carpeta `bl\`. También puedes inic
 
 - Abrir opencode en cualquier proyecto
 - Presionar **Tab** y seleccionar el agente **genexus**, o invocarlo directamente con `@genexus`
-- El agente tiene acceso a las 6 skills de GeneXus y al MCP para operar sobre las KBs
+- El agente tiene acceso a las 6 skills de GeneXus y al MCP para operar sobre las KBs (puedes verificar si esta activo el MCP en /mcps)
 
 #### 4. Skills de GeneXus Disponibles
 
