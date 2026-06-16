@@ -45,8 +45,8 @@ El servidor MCP de GeneXus se configura en `bl\appsettings.template.json` (dentr
     "SessionIdleTimeoutMinutes": 30
   },
   "KnowledgeBases": {
-    "ProjectsFolder": "C:\\PROYECTOS\\KBs",
-    "SqlServerInstance": "DARKMAN\\SQLEXPRESS",
+    "ProjectsFolder": "TU-CARPETA-DE-KBs",
+    "SqlServerInstance": "NOMBRE\\INSTANCIA-SQL",
     "SqlUserName": "",
     "SqlUserPassword": ""
   }
